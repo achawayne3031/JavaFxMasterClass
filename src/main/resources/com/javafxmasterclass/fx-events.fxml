@@ -6,9 +6,30 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.javafxmasterclass.FxEnvents"
-            prefHeight="400.0" prefWidth="600.0">
 
-</AnchorPane>
+
+
+<GridPane  xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.javafxmasterclass.HelloController">
+
+
+
+    <TextField fx:id="nameField" GridPane.rowIndex="0" GridPane.columnIndex="0"
+    onKeyReleased="#handleKeyReleased"/>
+
+    <Button fx:id="helloButton" text="Hello me" GridPane.rowIndex="1" GridPane.columnIndex="0" onAction="#onButtonCliked" />
+
+    <Button fx:id="byeButton" text="Bye me" GridPane.rowIndex="1" GridPane.columnIndex="1" onAction="#onButtonCliked" />
+
+
+    <CheckBox text="Clear the field after saying hello or bye" fx:id="ourCheckBox" GridPane.rowIndex="2"
+              GridPane.columnIndex="0" onAction="#handleChecked"/>
+
+
+    <Label text="Nothing has happened" fx:id="ourLabel" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+
+
+</GridPane>
+
+
